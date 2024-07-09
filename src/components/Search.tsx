@@ -1,6 +1,5 @@
 import axios from "axios";
 import { ChangeEvent, useEffect, useState } from "react";
-import GameCard from "./GameCard";
 
 interface Game {
   id: number;
