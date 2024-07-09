@@ -20,7 +20,7 @@ export default function Search() {
     async function fetchGames() {
       try {
         const response = await axios.get(
-          "https://www.freetogame.com/api/games"
+          'https://corsproxy.io/?' + encodeURIComponent('https://www.freetogame.com/api/games')
         );
         const data: Game[] = response.data;
         setAllGames(data);
