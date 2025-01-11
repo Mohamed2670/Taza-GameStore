@@ -74,7 +74,10 @@ export default function GameList() {
   useEffect(() => {
     async function fetchGames() {
       try {
-        const response = await axios.get('/api/games');
+        const response = await axios.get(
+          'https://corsproxy.io/?url=' + encodeURIComponent('https://www.freetogame.com/api/games')
+        );
+        
         const data: Game[] = response.data;
         setAllGames(data);
         setGames(data);
